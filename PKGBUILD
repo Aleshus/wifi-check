@@ -9,6 +9,11 @@ source=("check_and_connect.sh"
            "wifi-check.service"
            "wifi_config.conf")
 install=${pkgname}.install
+sha256sums=('SKIP'
+            'SKIP'
+            'SKIP')
+
+
 
 package() {
     # Install the script to /usr/local/bin/
