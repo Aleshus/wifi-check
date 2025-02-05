@@ -1,0 +1,14 @@
+   [Unit]
+   Description=WiFi Connection Checker and Auto-Connect Service
+   After=network.target
+
+   [Service]
+   ExecStart=/usr/local/bin/check_and_connect.sh
+   Restart=always
+   User=root
+   Environment="INTERFACE=wlan0 SSID=your_ssid IP_ADDRESS=192.168.1.100 NETMASK=255.255.255.0 GATEWAY=192.168.1.1"
+   ExecStartPre=/bin/sleep 5
+   TimeoutStartSec=0
+
+   [Install]
+   WantedBy=multi-user.target
