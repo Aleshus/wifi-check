@@ -6,7 +6,8 @@ arch=('any')
 license=('MIT')
 depends=('bash' 'iw' 'iproute2' 'systemd')
 source=("check_and_connect.sh"
-        "wifi-check.service")
+           "wifi-check.service"
+           "wifi_config.conf")
 install=${pkgname}.install
 
 package() {
